@@ -1,0 +1,135 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.contact-card {
+  background: var(--dark-card);
+  color: var(--dark-card-text);
+  border-radius: 0.6rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-decoration: none;
+  color: var(--dark-card-text);
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 1.25rem;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--gold);
+}
+
+.contact-link-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.85;
+}
+
+.contact-loc {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(var(--dark-card-text-rgb), 0.18);
+}
+
+.contact-form-wrap {
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.form-label {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.form-input,
+.form-textarea {
+  background: var(--bg);
+  border: 1.5px solid var(--line);
+  border-radius: 0.4rem;
+  color: var(--ink);
+  padding: 0.75rem 1rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  outline: none;
+  resize: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--gold-deep);
+}
+
+.form-textarea {
+  min-height: 120px;
+}
+
+.form-submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.3rem;
+}
+
+.form-note {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
+}
+
+.form-note-ok {
+  background: rgba(220, 170, 58, 0.16);
+  color: var(--gold-deep);
+  border: 1px solid var(--gold);
+}
+
+.form-note-err {
+  background: rgba(217, 99, 76, 0.14);
+  color: #b3402b;
+  border: 1px solid #d9634c;
+}
+
+@media (max-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

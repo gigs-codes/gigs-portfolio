@@ -1,0 +1,274 @@
+.chrome-brand {
+  position: fixed;
+  top: 1.6rem;
+  left: 1.7rem;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  background: rgba(var(--bg-rgb), 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.7rem;
+}
+
+.chrome-script {
+  font-family: var(--script);
+  font-size: 1.15rem;
+  color: var(--gold-deep);
+  margin-bottom: -0.1rem;
+}
+
+.chrome-name {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.35rem;
+  text-transform: none;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.chrome-name span {
+  color: var(--ink-soft);
+}
+
+.chrome-status-wrap {
+  position: relative;
+  display: inline-block;
+  margin-top: 0.4rem;
+  outline: none;
+  cursor: default;
+}
+
+.chrome-status {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-transform: none;
+}
+
+.chrome-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d9634c;
+  display: inline-block;
+}
+
+.chrome-status-pop {
+  position: absolute;
+  top: calc(100% + 0.7rem);
+  left: 0;
+  min-width: 220px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 0.7rem;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 16px 34px rgba(var(--ink-rgb), 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+}
+
+.chrome-status-wrap:hover .chrome-status-pop,
+.chrome-status-wrap:focus-within .chrome-status-pop,
+.chrome-status-wrap:focus .chrome-status-pop {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.chrome-status-pop strong {
+  display: block;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+  text-transform: none;
+}
+
+.chrome-status-pop-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.chrome-status-pop-tags span {
+  font-size: 0.66rem;
+  font-weight: 700;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.chrome-monogram {
+  position: fixed;
+  top: 0;
+  right: 2.4rem;
+  z-index: 500;
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  border-top: none;
+  padding: 0.6rem 0.8rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0 0 0.6rem 0.6rem;
+}
+
+.chrome-monogram-mark {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.chrome-monogram-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+}
+
+.chrome-nav {
+  position: fixed;
+  top: 2.3rem;
+  right: 7.5rem;
+  z-index: 500;
+  display: flex;
+  gap: 2rem;
+}
+
+.chrome-nav a {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.chrome-nav a:hover,
+.chrome-nav-active {
+  color: var(--ink) !important;
+}
+
+.chrome-burger {
+  display: none;
+  position: fixed;
+  top: 2rem;
+  right: 5.6rem;
+  z-index: 501;
+  width: 40px;
+  height: 40px;
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  border-radius: 0.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.chrome-burger span {
+  width: 18px;
+  height: 2px;
+  background: var(--ink);
+}
+
+.chrome-social {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.7rem;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background: rgba(var(--bg-rgb), 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.7rem 0.6rem;
+  border-radius: 0.7rem;
+}
+
+.chrome-social a {
+  color: var(--ink-soft);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.chrome-social a:hover {
+  color: var(--gold-deep);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .chrome-brand {
+    top: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .chrome-script {
+    font-size: 0.95rem;
+  }
+
+  .chrome-name {
+    font-size: 1.05rem;
+  }
+
+  .chrome-status-wrap {
+    display: none;
+  }
+
+  .chrome-monogram {
+    right: 1.25rem;
+    padding: 0.4rem 0.55rem 0.6rem;
+  }
+
+  .chrome-burger {
+    display: flex;
+  }
+
+  .chrome-nav {
+    top: 5.2rem;
+    right: 1.25rem;
+    left: 1.25rem;
+    background: var(--surface);
+    border: 2px solid var(--ink);
+    border-radius: 1rem;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem;
+    display: none;
+  }
+
+  .chrome-nav-open {
+    display: flex;
+  }
+
+  .chrome-nav a {
+    padding: 0.7rem 0.6rem;
+  }
+
+  .chrome-social {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    flex-direction: row;
+    gap: 1.4rem;
+  }
+}

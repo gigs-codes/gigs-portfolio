@@ -1,0 +1,81 @@
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.quote-mark {
+  font-family: var(--serif);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--gold);
+  display: block;
+  margin-bottom: -1rem;
+}
+
+.quote-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0.5rem 0 2rem;
+  text-transform: none;
+}
+
+.quote-attr-name {
+  display: block;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.quote-attr-role {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 0.2rem;
+  text-transform: none;
+}
+
+.quote-collage {
+  position: relative;
+  height: 320px;
+}
+
+.quote-photo {
+  position: absolute;
+  width: 62%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 3px solid var(--ink);
+  border-radius: 0.6rem;
+}
+
+.quote-photo-1 {
+  right: 0;
+  top: 0;
+  transform: rotate(4deg);
+  z-index: 1;
+}
+
+.quote-photo-2 {
+  left: 0;
+  bottom: 0;
+  transform: rotate(-6deg);
+  z-index: 2;
+  width: 52%;
+}
+
+@media (max-width: 860px) {
+  .quote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-collage {
+    height: 260px;
+    margin-top: 1rem;
+  }
+}
