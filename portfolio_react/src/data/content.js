@@ -36,7 +36,7 @@ export const workHighlights = [
 ]
 
 export const stats = [
-  { num: '1.5+', label: 'Years of experience' },
+  { num: '2+', label: 'Years of experience' },
   { num: '10+', label: 'Freelance & personal projects' },
   { num: '2', label: 'Peer-reviewed publications' },
   { num: '∞', label: 'Coffees consumed' },

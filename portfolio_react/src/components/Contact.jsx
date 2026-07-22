@@ -56,7 +56,7 @@ export default function Contact() {
                 <span className="contact-link-label">GitHub</span>
                 github.com/gigs-codes
               </a>
-              <a href="/GARIMA_SWAMI_RESUME.pdf" target="_blank" rel="noreferrer" className="contact-link">
+              <a href={`${import.meta.env.BASE_URL}GARIMA_SWAMI_RESUME.pdf`} target="_blank" rel="noreferrer" className="contact-link">
                 <span className="contact-link-label">Resume</span>
                 Download PDF
               </a>
